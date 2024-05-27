@@ -1,5 +1,48 @@
-/* Header Background */
+/* BACKGROUND STYLING */
 .background {
+  background: linear-gradient(
+    90deg,
+    #e9f7fd 0%,
+    #e8f6fd 9.09%,
+    #e7f1fc 18.18%,
+    #e5eafb 27.27%,
+    #e3e2fa 36.36%,
+    #e9dff8 45.45%,
+    #efddf6 54.55%,
+    #f4dbf3 63.64%,
+    #f2d9ea 72.73%,
+    #f0d8e2 81.82%,
+    #efd7de 90.91%,
+    #eed7dc 100%
+  );
+  background-image: linear-gradient(
+    90deg,
+    rgb(233, 247, 253) 0%,
+    rgb(232, 246, 253) 9.09%,
+    rgb(231, 241, 252) 18.18%,
+    rgb(229, 234, 251) 27.27%,
+    rgb(227, 226, 250) 36.36%,
+    rgb(233, 223, 248) 45.45%,
+    rgb(239, 221, 246) 54.55%,
+    rgb(244, 219, 243) 63.64%,
+    rgb(242, 217, 234) 72.73%,
+    rgb(240, 216, 226) 81.82%,
+    rgb(239, 215, 222) 90.91%,
+    rgb(238, 215, 220) 100%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* Background Header */
+.backgroundHeader {
   position: relative;
   border-bottom-left-radius: 4em;
   border-bottom-right-radius: 4em;

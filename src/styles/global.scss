@@ -1,5 +1,9 @@
 @import url('https://path-to-your-font/SF-UI-Text.css');
 
+* {
+  box-sizing: inherit;
+}
+
 /* BODY STYLING */
 body,
 html {
@@ -15,7 +19,7 @@ body {
   margin: 0;
   padding: 0 !important;
   padding-top: 0px !important;
-  height: 295px; /*check this*/
+  height: 295px; /*element-style*/
 }
 
 html {
@@ -23,4 +27,8 @@ html {
   background-repeat: repeat-x;
   background-attachment: fixed;
   box-sizing: border-box;
+}
+
+div {
+  border-radius: 0;
 }

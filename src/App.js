@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import BackgroundHeader from './components/BackgroundHeader';
 import CourseSummarySection from './components/CourseSummarySection';
 import DecoSection from './components/DecoSection';
 import FAQSection from './components/FAQSection';
@@ -13,7 +14,9 @@ import TrailerSection from './components/TrailerSection';
 
 const App = () => (
   <div className="App">
-    <NavBar />
+    <BackgroundHeader>
+      <NavBar />
+    </BackgroundHeader>
     <IntroSection />
     <DecoSection />
     <TrailerSection />
