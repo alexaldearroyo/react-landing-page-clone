@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../styles/styles.module.scss';
 
 const InstructorSection = () => (
   <section className="sectionStart">

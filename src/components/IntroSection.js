@@ -1,16 +1,17 @@
 import React from 'react';
+import styles from '../styles/styles.module.scss';
 
 const IntroSection = () => (
-  <section className="sectionStart">
-    <div className="sectionContainer">
-      <div className="sectionHeader">
-        <h2 className="price">
+  <section className={styles.sectionStart}>
+    <div className={styles.sectionContainer}>
+      <div className={styles.sectionHeader}>
+        <h2 className={styles.price}>
           Learn how to create your own variable color font
         </h2>
-        <p className="introTextBody">
+        <p className={styles.introTextBody}>
           Variable fonts are an exciting new way to express typography...
         </p>
-        <div className="intoCourseLeader">
+        <div className={styles.intoCourseLeader}>
           <img
             src="https://www.variablefontcourse.com/wp-content/uploads/2021/08/arthur_mattmo_crop.jpeg"
             alt=""
@@ -20,13 +21,13 @@ const IntroSection = () => (
             <p>Instructor</p>
           </div>
         </div>
-        <div className="contentBoxGrid">
-          <p className="contentBoxPrice">Full course, only €179</p>
+        <div className={styles.contentBoxGrid}>
+          <p className={styles.contentBoxPrice}>Full course, only €179</p>
           <a
             href="https://www.variablefontcourse.com/checkout/?add-to-cart=101"
             title="Join Now"
           >
-            <button className="enroll">Join Now</button>
+            <button className={styles.enroll}>Join Now</button>
           </a>
         </div>
       </div>

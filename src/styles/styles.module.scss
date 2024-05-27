@@ -1,0 +1,354 @@
+/* Header Background */
+.background {
+  position: relative;
+  border-bottom-left-radius: 4em;
+  border-bottom-right-radius: 4em;
+}
+
+/* Navigation Styles */
+.navUl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLi {
+  display: inline-block;
+}
+
+.navLiEnd {
+  justify-self: end;
+}
+
+.logo {
+  width: auto;
+}
+
+/* Styles for button-like links */
+.enrollLink,
+.signinLink {
+  background: var(--vfcBlue);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.signinLink {
+  background: transparent;
+  color: inherit;
+}
+
+/* Buttons */
+.signin,
+.enroll {
+  background: var(--vfcBlue);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signin {
+  background: transparent;
+  color: inherit;
+}
+
+.enroll {
+  background: var(--vfcBlue);
+  color: white;
+}
+
+/* Intro Section */
+.sectionStart {
+  padding: 2em 0;
+}
+
+.sectionContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.sectionHeader .price {
+  font-size: 2em;
+  color: #2a2a2a;
+}
+
+.introTextBody {
+  text-align: center;
+  font-size: 1.2em;
+  color: #2a2a2a;
+}
+
+.intoCourseLeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.intoCourseLeader img {
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.intoCourseLeader p {
+  margin: 0;
+}
+
+/* Content Box */
+.contentBoxGrid {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.contentBoxPrice {
+  font-size: 1.5em;
+  color: #2a2a2a;
+  margin-bottom: 1em;
+}
+
+.contentBoxPrice::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #2a2a2a;
+  width: 100px;
+  margin: 10px auto;
+}
+
+/* Deco Section */
+.deco {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.deco .space {
+  display: inline-block;
+  width: 1em;
+}
+
+.deco .l,
+.deco .e,
+.deco .a,
+.deco .r,
+.deco .n {
+  display: inline-block;
+  font-size: 2em;
+  color: #2a2a2a;
+}
+
+/* Trailer Section */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Learn Section */
+.learnSummaryGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.learnSummaryGridItem {
+  width: 30%;
+  text-align: center;
+}
+
+.learnSummaryGridItem img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+/* Instructor Section */
+.leaderGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.leaderImg {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.leaderMasonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+/* FAQ Section */
+.faq .accordion {
+  background: #eee;
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.4s ease;
+}
+
+.faq .accordion:hover {
+  background-color: #ccc;
+}
+
+.faq .panel {
+  padding: 0 1em;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Reviews Section */
+.reviewM {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.reviewM li {
+  display: flex;
+  align-items: center;
+}
+
+.reviewM img {
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.reviewM .reviewQuote {
+  font-size: 1.2em;
+  color: #2a2a2a;
+}
+
+.reviewM .reviewName {
+  font-size: 1em;
+  color: #0073e6;
+  margin: 0;
+}
+
+.reviewM .reviewRole {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Ready Section */
+.readyBox {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.readyBoxPrice {
+  font-size: 2em;
+  color: #2a2a2a;
+}
+
+.readyBoxTitle {
+  font-size: 1.2em;
+  color: #2a2a2a;
+  margin: 1em 0;
+}
+
+.readyBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.readyBox ul li {
+  font-size: 1em;
+  color: #2a2a2a;
+  margin: 0.5em 0;
+}
+
+.readyFooterGrid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.readyFooter {
+  width: 100%;
+}
+
+.readyFooter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.readyFooter ul li {
+  margin: 0 1em;
+}
+
+.readyFooter ul li a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.details-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.details-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.details-modal-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}
