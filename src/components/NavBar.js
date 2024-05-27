@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 import styles from '../styles/styles.module.scss';
 
@@ -6,7 +7,7 @@ import styles from '../styles/styles.module.scss';
 const NavBar = () => (
   <div className={styles.background}>
     <nav>
-      <span>
+      <span className={styles.navSpan}>
         <ul className={styles.navUl}>
           <li
             className={styles.navLi}
@@ -21,13 +22,23 @@ const NavBar = () => (
             />
             <meta itemProp="url" content="https://www.variablefontcourse.com" />
           </li>
-          {/* <li className="styles.navLiCenter"></li> */}
+          <li className={styles.navLiCenter}>{/* " " */}</li>
           <li className={styles.navLiEnd}>
             <a href="/checkout/?add-to-cart=101" title="Join the course">
-              <span className={styles.signin}>JOIN NOW</span>
+              <span
+                className={classNames(
+                  styles.signin,
+                  styles.joinButton,
+                  styles.spanButton,
+                )}
+              >
+                JOIN NOW
+              </span>
             </a>
             <a href="/wp-login.php" title="Sign in">
-              <span className={styles.signin}>Sign in</span>
+              <span className={classNames(styles.signin, styles.spanButton)}>
+                Sign in
+              </span>
             </a>
           </li>
         </ul>

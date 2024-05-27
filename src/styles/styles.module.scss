@@ -15,51 +15,35 @@
     #efd7de 90.91%,
     #eed7dc 100%
   );
-  background-image: linear-gradient(
-    90deg,
-    rgb(233, 247, 253) 0%,
-    rgb(232, 246, 253) 9.09%,
-    rgb(231, 241, 252) 18.18%,
-    rgb(229, 234, 251) 27.27%,
-    rgb(227, 226, 250) 36.36%,
-    rgb(233, 223, 248) 45.45%,
-    rgb(239, 221, 246) 54.55%,
-    rgb(244, 219, 243) 63.64%,
-    rgb(242, 217, 234) 72.73%,
-    rgb(240, 216, 226) 81.82%,
-    rgb(239, 215, 222) 90.91%,
-    rgb(238, 215, 220) 100%
-  );
-  background-position-x: initial;
-  background-position-y: initial;
-  background-size: initial;
-  background-repeat: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-/* Background Header */
+/* BACKGROUND HEADER */
 .backgroundHeader {
   position: relative;
   border-bottom-left-radius: 4em;
   border-bottom-right-radius: 4em;
 }
 
-/* Navigation Styles */
+/* NAVIGATION BAR */
+.navSpan {
+  position: relative;
+  top: 1em;
+}
+
 .navUl {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: grid;
+  list-style-type: none;
+  place-items: center;
 }
 
 .navLi {
-  display: inline-block;
+  place-self: start;
+}
+
+.navLiCenter {
+  font-size: 1rem;
 }
 
 .navLiEnd {
@@ -68,6 +52,65 @@
 
 .logo {
   width: auto;
+}
+
+/* Buttons */
+
+.spanButton {
+  text-transform: none;
+  overflow: visible;
+  margin: 0;
+}
+
+.joinButton {
+  background: var(--vfcBlue);
+  color: white;
+}
+
+.signin {
+  font-family: 'SF UI Text', sans-serif;
+  font-size: 0.8em;
+  background: transparent;
+  text-align: center;
+  color: #2a2a2a;
+  border: 2px solid transparent;
+}
+
+/* HEADER CONTENT */
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin-left: auto;
+  gap: 2rem;
+  cursor:
+    url(../../public/stretch-online.svg) 4 12,
+    auto;
+}
+
+.displayVariable {
+  height: 65vh;
+  display: grid;
+  padding-top: 4em;
+}
+
+.variable {
+  // font-family: 'Frequency';
+  font-size: 9vw;
+  line-height: 0.8em;
+  display: inline-block;
+  color: #000bff;
+  text-align: center;
+  text-rendering: geometricPrecision;
+  cursor:
+    url(../../public/stretch-online.svg) 0 0,
+    auto;
+}
+
+.variableSettings {
+  font-variation-settings: 'wdth' 299.432;
 }
 
 /* Styles for button-like links */
@@ -98,11 +141,6 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.signin {
-  background: transparent;
-  color: inherit;
 }
 
 .enroll {
@@ -394,4 +432,22 @@
   top: 1em;
   right: 1em;
   cursor: pointer;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 767px) {
+  .navUl {
+    grid-template-columns: 1fr auto 1fr;
+    margin: 0 1em;
+  }
+  .logo {
+    height: 1.5rem;
+  }
+  .navLiCenter {
+    padding-top: 0;
+  }
+}
+
+:root {
+  --vfcBlue: #0073e6;
 }

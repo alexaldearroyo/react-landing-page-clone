@@ -32,3 +32,41 @@ html {
 div {
   border-radius: 0;
 }
+
+nav {
+  font-size: 1rem;
+}
+
+// nav span {
+//   position: relative;
+//   top: 1em;
+// }
+
+ul {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  border-radius: 0;
+}
+
+img {
+  border: 0;
+  font-style: italic;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: var(--bb-primary-color);
+  outline: 0;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+button {
+  text-transform: none;
+  overflow: visible;
+  margin: 0;
+}
