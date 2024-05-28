@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/styles.module.scss';
+import styles from '../styles/IntroSection.module.scss';
 
 const IntroSection = () => (
   <section className={styles.sectionStart}>
@@ -16,9 +16,9 @@ const IntroSection = () => (
             src="https://www.variablefontcourse.com/wp-content/uploads/2021/08/arthur_mattmo_crop.jpeg"
             alt=""
           />
-          <div>
-            <p>Arthur Reinders Folmer</p>
-            <p>Instructor</p>
+          <div className={styles.display}>
+            <p className={styles.instructorName}> Arthur Reinders Folmer</p>
+            <p className={styles.instructor}>Instructor</p>
           </div>
         </div>
         <div className={styles.contentBoxGrid}>
@@ -27,11 +27,12 @@ const IntroSection = () => (
             href="https://www.variablefontcourse.com/checkout/?add-to-cart=101"
             title="Join Now"
           >
-            <button className={styles.enroll}>Join Now</button>
+            <span className={styles.enroll}>Join Now</span>
           </a>
         </div>
       </div>
     </div>
+    <div className={styles.contentBox}></div>
   </section>
 );
 
