@@ -1,5 +1,6 @@
+import classNames from 'classnames';
 import React from 'react';
-import styles from '../styles/IntroSection.module.scss';
+import styles from '../styles/styles.module.scss';
 
 const IntroSection = () => (
   <section className={styles.sectionStart}>
@@ -11,8 +12,9 @@ const IntroSection = () => (
         <p className={styles.introTextBody}>
           Variable fonts are an exciting new way to express typography...
         </p>
-        <div className={styles.intoCourseLeader}>
+        <div className={styles.introCourseLeader}>
           <img
+            className={styles.instructorImage}
             src="https://www.variablefontcourse.com/wp-content/uploads/2021/08/arthur_mattmo_crop.jpeg"
             alt=""
           />
@@ -27,12 +29,14 @@ const IntroSection = () => (
             href="https://www.variablefontcourse.com/checkout/?add-to-cart=101"
             title="Join Now"
           >
-            <span className={styles.enroll}>Join Now</span>
+            <span className={classNames(styles.enroll, styles.enrollButton)}>
+              Join Now
+            </span>
           </a>
         </div>
       </div>
     </div>
-    <div className={styles.contentBox}></div>
+    <div className={styles.contentBox}> </div>
   </section>
 );
 

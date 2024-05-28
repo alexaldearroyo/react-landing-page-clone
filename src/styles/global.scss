@@ -1,10 +1,9 @@
-@import url('https://path-to-your-font/SF-UI-Text.css');
-
 * {
   box-sizing: inherit;
 }
 
-/* BODY STYLING */
+/* ELEMENTS */
+
 body,
 html {
   min-height: 100%;
@@ -37,6 +36,7 @@ div {
 
 nav {
   font-size: 1em;
+  display: block;
 }
 
 // nav span {
@@ -58,6 +58,7 @@ img {
   font-style: italic;
   max-width: 100%;
   vertical-align: middle;
+  height: auto;
 }
 
 a {
@@ -73,9 +74,38 @@ button {
   margin: 0;
 }
 
-:root {
-  --bb-primary-color: #0000ff;
+section {
+  display: block;
 }
+
+h2 {
+  // font-family: 'SF UI Display';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  font-display: swap;
+  line-height: 1.2;
+}
+
+p {
+  font-family: 'SF UI Tex', sans-serif;
+  color: #2a2a2a;
+  margin: 0 0 1.6875rem;
+  padding: 0;
+  line-height: 1.5em;
+}
+
+/* VARIABLES */
+
+:root {
+  --vfcBlue: #0000ff;
+  --bb-button-radius: 100px;
+  --bb-primary-color: #0000ff;
+  --bb-primary-button-text-regular: #ffffff;
+  --bb-primary-button-border-regular: #385dff;
+}
+
+/* FONTS */
 
 @font-face {
   font-family: 'SF UI Text';
@@ -83,5 +113,23 @@ button {
     url('../../public/SFUIText\ Regular.woff') format('woff'),
     url('../../public/SFUIText\ Regular.woff') format('truetype');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Frequency';
+  src:
+    url('../../public/Frequency.woff2') format('woff2-variations'),
+    url('../../public/Frequency.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Frequency_Variable';
+  src:
+    url('../../public/Frequency-Variable.woff2') format('woff2-variations'),
+    url('../../public/Frequency-Variable.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
 }

@@ -1,953 +1,148 @@
-// src/App.css:
+// src/styles/IntroSection.module.scss:
 
-.App {
-  text-align: center;
+
+----------------------------------------
+
+// src/styles/global.scss:
+
+@import url('https://path-to-your-font/SF-UI-Text.css');
+
+* {
+  box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* BODY STYLING */
+body,
+html {
+  min-height: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-----------------------------------------
-
-// src/App.js:
-
-import './App.css';
-import React from 'react';
-import CourseSummarySection from './components/CourseSummarySection';
-import DecoSection from './components/DecoSection';
-import FAQSection from './components/FAQSection';
-import Footer from './components/Footer';
-import InstructorSection from './components/InstructorSection';
-import IntroSection from './components/IntroSection';
-import NavBar from './components/NavBar';
-import ReadySection from './components/ReadySection';
-import ReviewsSection from './components/ReviewsSection';
-import TrailerSection from './components/TrailerSection';
-
-const App = () => (
-  <div className="App">
-    <NavBar />
-    <IntroSection />
-    <DecoSection />
-    <TrailerSection />
-    <CourseSummarySection />
-    <InstructorSection />
-    <FAQSection />
-    <ReviewsSection />
-    <ReadySection />
-    <Footer />
-  </div>
-);
-
-export default App;
-
-----------------------------------------
-
-// src/App.test.js:
-
-import { expect, test } from '@jest/globals';
-import { render, screen } from '@testing-library/react';
-import App from './App';
-
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-----------------------------------------
-
-// src/components/InstructorSection.js:
-
-import React from 'react';
-import styles from '../styles/styles.module.scss';
-
-const InstructorSection = () => (
-  <section className="sectionStart">
-    <div className="sectionContainer">
-      <div className="sectionHeader">
-        <h2 className="price">Meet your instructor</h2>
-      </div>
-      <div className="sectionContent">
-        <div className="leaderGrid">
-          <div
-            className="leaderImg"
-            style={{
-              background:
-                'linear-gradient(234deg,#3234FF, #DEA5B0), url("https://www.variablefontcourse.com/wp-content/uploads/2022/04/arthur.jpg") center center',
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-            }}
-          ></div>
-          <span>
-            <p>
-              <a href="https://www.typearture.com/?ref=VFC">
-                Arthur Reinders Folmer
-              </a>{' '}
-              likes to play with typography...
-            </p>
-            <p>Through his type foundry, Typearture...</p>
-            <p>
-              Be sure to check out his{' '}
-              <a href="https://www.instagram.com/typearture/">Instagram</a>.
-            </p>
-            <p>
-              <i>
-                “The absolute craziest variable color font designer on planet
-                earth!”
-              </i>{' '}
-              – Ulrike Rausch
-            </p>
-          </span>
-        </div>
-        <div className="leaderMasonry">
-          <img
-            src="https://www.variablefontcourse.com/wp-content/uploads/2022/01/InitialAnimatie.gif"
-            alt=""
-          />
-          <img
-            src="https://www.variablefontcourse.com/wp-content/uploads/2022/03/Typearture-Kado_wide.gif"
-            alt="Showcase Variable Color Font 'Gift box' by Typearture"
-          />
-          <img
-            src="https://www.variablefontcourse.com/wp-content/uploads/2022/03/Typearture-BassieAdriaan.gif"
-            alt="Showcase Variable Color Font Bassie en Adriaan by Typearture"
-          />
-          <img
-            src="https://www.variablefontcourse.com/wp-content/uploads/2022/01/InitialGrowth.gif"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-export default InstructorSection;
-
-----------------------------------------
-
-// src/components/CourseSummarySection.js:
-
-import React from 'react';
-
-const CourseSummarySection = () => (
-  <section className="sectionStart learn">
-    <div className="learnTopShape"></div>
-    <div className="sectionContainer">
-      <div className="sectionHeader">
-        <h2 className="price transition">What you will learn</h2>
-        <p>The course consists of 11 video lessons...</p>
-      </div>
-      <div className="sectionContent">
-        <ul className="learnSummaryGrid">
-          <li className="learnSummaryGridItem">
-            <div className="learnSummaryGridItemCenter">
-              <img
-                src="https://www.variablefontcourse.com/wp-content/uploads/2022/03/vfc_learn01.svg"
-                alt=""
-              />
-            </div>
-            <p>
-              <strong>Create a basic typeface in Glyphs 3</strong>
-            </p>
-          </li>
-          <li className="learnSummaryGridItem">
-            <div className="learnSummaryGridItemCenter">
-              <img
-                src="https://www.variablefontcourse.com/wp-content/uploads/2022/03/vfc_learn02.svg"
-                alt=""
-              />
-            </div>
-            <p>
-              <strong>Add variables to your typeface</strong>
-            </p>
-          </li>
-          <li className="learnSummaryGridItem">
-            <div className="learnSummaryGridItemCenter">
-              <img
-                src="https://www.variablefontcourse.com/wp-content/uploads/2022/03/vfc_learn03.svg"
-                alt=""
-              />
-            </div>
-            <p>
-              <strong>Add colors to it</strong>
-            </p>
-          </li>
-          <li className="learnSummaryGridItem">
-            <div className="learnSummaryGridItemCenter">
-              <img
-                src="https://www.variablefontcourse.com/wp-content/uploads/2022/03/vfc_learn04.svg"
-                alt=""
-              />
-            </div>
-            <p>
-              <strong>Export your variable color font to use on the web</strong>
-            </p>
-          </li>
-          <li className="learnSummaryGridItem">
-            <div className="learnSummaryGridItemCenter">
-              <img
-                src="https://www.variablefontcourse.com/wp-content/uploads/2022/03/vfc_learn05.svg"
-                alt=""
-              />
-            </div>
-            <p>
-              <strong>Implement it in HTML and CSS</strong>
-            </p>
-          </li>
-          <li className="learnSummaryGridItem">
-            <div className="learnSummaryGridItemCenter">
-              <img
-                src="https://www.variablefontcourse.com/wp-content/uploads/2022/03/vfc_learn06.svg"
-                alt=""
-              />
-            </div>
-            <p>
-              <strong>Animate it in the browser</strong>
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-);
-
-export default CourseSummarySection;
-
-----------------------------------------
-
-// src/components/NavBar.js:
-
-import React from 'react';
-import styles from '../styles/styles.module.scss';
-
-// import logo from '../../public/logo.svg';
-
-const NavBar = () => (
-  <div className={styles.background}>
-    <nav>
-      <span>
-        <ul className={styles.navUl}>
-          <li
-            className={styles.navLi}
-            itemProp="https://schema.org/Organization"
-          >
-            <img
-              itemProp="logo"
-              className={styles.logo}
-              src="/logo.svg"
-              alt="Variable Font Course Logo"
-              title="Variable Font Course Logo"
-            />
-            <meta itemProp="url" content="https://www.variablefontcourse.com" />
-          </li>
-          {/* <li className="styles.navLiCenter"></li> */}
-          <li className={styles.navLiEnd}>
-            <a href="/checkout/?add-to-cart=101" title="Join the course">
-              <span className={styles.signin}>JOIN NOW</span>
-            </a>
-            <a href="/wp-login.php" title="Sign in">
-              <span className={styles.signin}>Sign in</span>
-            </a>
-          </li>
-        </ul>
-      </span>
-    </nav>
-  </div>
-);
-
-export default NavBar;
-
-----------------------------------------
-
-// src/components/ReadySection.js:
-
-import React from 'react';
-
-const ReadySection = () => (
-  <section className="sectionStart ready">
-    <div className="readyWhite"></div>
-    <div className="sectionContainer">
-      <div className="readyTitle">
-        <p>Ready?</p>
-      </div>
-      <div className="readyBox">
-        <h2 className="readyBoxPrice">One-time purchase</h2>
-        <p className="readyBoxTitle">
-          Get instant lifetime access to the Variable Font Course
-        </p>
-        <span className="readyBoxTitle">
-          <small></small>
-        </span>
-        <p className="readyBoxPrice">€179</p>
-        <p className="readyBoxTitle">
-          <small>(Normal price €399)</small>
-        </p>
-        <ul>
-          <li>11 video lessons, including transcriptions</li>
-          <li>3 bonus lessons</li>
-          <li>
-            Everything is covered, from designing the font to implementation on
-            the web
-          </li>
-          <li>Learn in your own tempo</li>
-          <li>World class instructor</li>
-          <li>Unlimited access forever</li>
-        </ul>
-        <div>
-          <a href="https://www.variablefontcourse.com/checkout/?add-to-cart=101">
-            <button alt="Join the course today">Join now</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-export default ReadySection;
-
-----------------------------------------
-
-// src/components/TrailerSection.js:
-
-import React from 'react';
-
-const TrailerSection = () => (
-  <section className="sectionStart">
-    <div className="sectionContainer">
-      <div id="trailer" className="sectionHeader">
-        <h2 className="price">Watch the trailer</h2>
-      </div>
-      <div className="sectionContent trailer">
-        <div className="embed-container">
-          <iframe
-            title="Variable Font Course"
-            src="https://player.vimeo.com/video/695357111?dnt=1&app_id=122963"
-            width="640"
-            height="360"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-export default TrailerSection;
-
-----------------------------------------
-
-// src/components/ReviewsSection.js:
-
-import React from 'react';
-
-const ReviewsSection = () => (
-  <section className="sectionStart review">
-    <div className="sectionContainer reviewM">
-      <div
-        className="sectionHeader"
-        itemscope
-        itemtype="https://schema.org/Review"
-      >
-        <h2 className="price">What our students say</h2>
-      </div>
-      <div className="sectionContent">
-        <ul
-          itemprop="itemReviewed"
-          itemscope
-          itemtype="https://schema.org/Course"
-        >
-          <meta itemprop="name" content="Variable Font Course" />
-          <meta
-            itemprop="description"
-            content="Arthur Reinders Folmer from Typearture teaches you in 11 lessons how to create a working variable color font and implement it in a website."
-          />
-          <meta itemprop="provider" content="variablefontcourse.com" />
-          <li>
-            <img
-              src="https://www.variablefontcourse.com/wp-content/uploads/2022/01/Mandy-Michael-1.png"
-              alt=""
-            />
-            <span>
-              <p className="reviewQuote" itemprop="reviewBody">
-                I can finally make my own Variable Fonts...
-              </p>
-              <p
-                className="reviewName"
-                itemprop="author"
-                itemscope
-                itemtype="https://schema.org/Person"
-              >
-                <a
-                  itemprop="name"
-                  href="https://twitter.com/Mandy_Kerr"
-                  title="Vist website Mandy Michael"
-                >
-                  Mandy Michael
-                </a>
-              </p>
-              <p className="reviewRole">Front end developer</p>
-            </span>
-          </li>
-          <li>
-            <img
-              src="https://www.variablefontcourse.com/wp-content/uploads/2022/01/Richard-McDonald-1.jpg"
-              alt=""
-            />
-            <span>
-              <p className="reviewQuote" itemprop="reviewBody">
-                Arthur is able to share his knowledge...
-              </p>
-              <p
-                className="reviewName"
-                itemprop="author"
-                itemscope
-                itemtype="https://schema.org/Person"
-              >
-                <a
-                  itemprop="name"
-                  href="https://www.instagram.com/richardmcdonald/"
-                  title="Vist website Richard McDonald"
-                >
-                  Richard McDonald
-                </a>
-              </p>
-              <p className="reviewRole">Graphic designer</p>
-            </span>
-          </li>
-          <li>
-            <img
-              src="https://www.variablefontcourse.com/wp-content/uploads/2022/01/Niyati-Mehta-1.png"
-              alt=""
-            />
-            <span>
-              <p className="reviewQuote" itemprop="reviewBody">
-                I’ve always been a fan of kinetic typography...
-              </p>
-              <p
-                className="reviewName"
-                itemprop="author"
-                itemscope
-                itemtype="https://schema.org/Person"
-              >
-                <a
-                  itemprop="name"
-                  href="https://niyatimehta.design/?ref=VFC"
-                  title="Vist website Niyati Mehta"
-                >
-                  Niyati Mehta
-                </a>
-              </p>
-              <p className="reviewRole">Designer</p>
-            </span>
-          </li>
-          <li>
-            <img
-              src="https://www.variablefontcourse.com/wp-content/uploads/2022/01/robdebree-1.png"
-              alt=""
-            />
-            <span>
-              <p className="reviewQuote" itemprop="reviewBody">
-                Exploring the near future of type design...
-              </p>
-              <p
-                className="reviewName"
-                itemprop="author"
-                itemscope
-                itemtype="https://schema.org/Person"
-              >
-                <a
-                  itemprop="name"
-                  href="https://www.burobree.nl/?ref=VFC"
-                  title="Vist website Rob de Bree"
-                >
-                  Rob de Bree
-                </a>
-              </p>
-              <p className="reviewRole">Brand designer</p>
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-);
-
-export default ReviewsSection;
-
-----------------------------------------
-
-// src/components/FAQSection.js:
-
-import React from 'react';
-
-const FAQSection = () => (
-  <section
-    className="sectionStart faq"
-    itemscope
-    itemtype="https://schema.org/FAQPage"
-  >
-    <div className="sectionContainer faqBox">
-      <div className="sectionHeader">
-        <h2 className="price">Frequently Asked Questions</h2>
-      </div>
-      <div className="sectionContent">
-        <span
-          itemscope
-          itemprop="mainEntity"
-          itemtype="https://schema.org/Question"
-        >
-          <button className="accordion">
-            <span itemprop="name">For whom is this course?</span>
-          </button>
-          <div
-            itemscope
-            itemprop="acceptedAnswer"
-            itemtype="https://schema.org/Answer"
-            className="panel"
-          >
-            <p itemprop="text">
-              For everyone who wants to experiment with variable fonts...
-            </p>
-          </div>
-        </span>
-        <span
-          itemscope
-          itemprop="mainEntity"
-          itemtype="https://schema.org/Question"
-        >
-          <button className="accordion">
-            <span itemprop="name">
-              I have never made a font before, and never worked with Glyphs...
-            </span>
-          </button>
-          <div
-            itemscope
-            itemprop="acceptedAnswer"
-            itemtype="https://schema.org/Answer"
-            className="panel"
-          >
-            <p itemprop="text">
-              No problem. Basic graphic design skills are required...
-            </p>
-          </div>
-        </span>
-        <span
-          itemscope
-          itemprop="mainEntity"
-          itemtype="https://schema.org/Question"
-        >
-          <button className="accordion">
-            <span itemprop="name">What topics do the lessons cover?</span>
-          </button>
-          <div
-            itemscope
-            itemprop="acceptedAnswer"
-            itemtype="https://schema.org/Answer"
-            className="panel"
-          >
-            <p itemprop="text">We have created 11 video lessons...</p>
-          </div>
-        </span>
-        <span
-          itemscope
-          itemprop="mainEntity"
-          itemtype="https://schema.org/Question"
-        >
-          <button className="accordion">
-            <span itemprop="name">Which font drawing tool do I need?</span>
-          </button>
-          <div
-            itemscope
-            itemprop="acceptedAnswer"
-            itemtype="https://schema.org/Answer"
-            className="panel"
-          >
-            <p itemprop="text">
-              - A vector drawing program like Illustrator...
-            </p>
-          </div>
-        </span>
-        <span
-          itemscope
-          itemprop="mainEntity"
-          itemtype="https://schema.org/Question"
-        >
-          <button className="accordion">
-            <span itemprop="name">What software skills do I need?</span>
-          </button>
-          <div
-            itemscope
-            itemprop="acceptedAnswer"
-            itemtype="https://schema.org/Answer"
-            className="panel"
-          >
-            <p itemprop="text">
-              You know how to draw in a vector based program...
-            </p>
-          </div>
-        </span>
-        <span
-          itemscope
-          itemprop="mainEntity"
-          itemtype="https://schema.org/Question"
-        >
-          <button className="accordion">
-            <span itemprop="name">Do you offer discounts?</span>
-          </button>
-          <div
-            itemscope
-            itemprop="acceptedAnswer"
-            itemtype="https://schema.org/Answer"
-            className="panel"
-          >
-            <p itemprop="text">
-              We launch the course with a big (but temporary) discount...
-            </p>
-          </div>
-        </span>
-        <span
-          itemscope
-          itemprop="mainEntity"
-          itemtype="https://schema.org/Question"
-        >
-          <button className="accordion">
-            <span itemprop="name">Can I give the course as a gift?</span>
-          </button>
-          <div
-            itemscope
-            itemprop="acceptedAnswer"
-            itemtype="https://schema.org/Answer"
-            className="panel"
-          >
-            <p itemprop="text">Want a great idea. Yes, it’s possible...</p>
-          </div>
-        </span>
-        <span
-          itemscope
-          itemprop="mainEntity"
-          itemtype="https://schema.org/Question"
-        >
-          <button className="accordion">
-            <span itemprop="name">
-              How long do I have access to the course?
-            </span>
-          </button>
-          <div
-            itemscope
-            itemprop="acceptedAnswer"
-            itemtype="https://schema.org/Answer"
-            className="panel"
-          >
-            <p itemprop="text">How does lifetime access sound?...</p>
-          </div>
-        </span>
-        <span
-          itemscope
-          itemprop="mainEntity"
-          itemtype="https://schema.org/Question"
-        >
-          <button className="accordion">
-            <span itemprop="name">I have another question</span>
-          </button>
-          <div
-            itemscope
-            itemprop="acceptedAnswer"
-            itemtype="https://schema.org/Answer"
-            className="panel"
-          >
-            <p itemprop="text">
-              Sure - contact us at{' '}
-              <a href="mailto:info@variablefontcourse.com">
-                info@variablefontcourse.com
-              </a>
-              .
-            </p>
-          </div>
-        </span>
-      </div>
-    </div>
-  </section>
-);
-
-export default FAQSection;
-
-----------------------------------------
-
-// src/components/Footer.js:
-
-import React from 'react';
-
-const Footer = () => (
-  <footer className="footer">
-    <div className="footerContainer">
-      <ul>
-        <li>
-          <a href="/what-is-a-variable-font/">What is a Variable Font</a>
-        </li>
-        <li>
-          <details>
-            <summary>
-              <div>Contact</div>
-            </summary>
-            <div className="details-modal">
-              <div className="details-modal-close">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579 1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7 0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421 12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7 13.7071 1.70711Z"
-                    fill="black"
-                  ></path>
-                </svg>
-              </div>
-              <div className="details-modal-title">
-                <h1>Contact</h1>
-              </div>
-              <div className="details-modal-content">
-                <p>
-                  If you have any questions or concerns regarding FAQ or your
-                  order, please do not hesitate and contact us at{' '}
-                  <a href="mailto:info@variablefontcourse.com">
-                    info@variablefontcourse.com
-                  </a>
-                  .
-                </p>
-              </div>
-            </div>
-          </details>
-        </li>
-        <li>
-          <details>
-            <summary>
-              <div>Terms and conditions</div>
-            </summary>
-            <div className="details-modal">
-              <div className="details-modal-close">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579 1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7 0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421 12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7 13.7071 1.70711Z"
-                    fill="black"
-                  ></path>
-                </svg>
-              </div>
-              <div className="details-modal-title">
-                <h1>Terms and conditions</h1>
-              </div>
-              <div className="details-modal-content">
-                <p>
-                  For all services provided on variablefontcourse.com, part of
-                  Studio Dahm, established in Delft, KvK number 20148379, the
-                  following conditions apply when purchasing video training...
-                </p>
-              </div>
-            </div>
-          </details>
-        </li>
-        <li>
-          <a href="https://variablefontcourse.eo.page/stay-in-touch">
-            Join our mailing list
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-);
-
-export default Footer;
-
-----------------------------------------
-
-// src/components/IntroSection.js:
-
-import React from 'react';
-import styles from '../styles/styles.module.scss';
-
-const IntroSection = () => (
-  <section className={styles.sectionStart}>
-    <div className={styles.sectionContainer}>
-      <div className={styles.sectionHeader}>
-        <h2 className={styles.price}>
-          Learn how to create your own variable color font
-        </h2>
-        <p className={styles.introTextBody}>
-          Variable fonts are an exciting new way to express typography...
-        </p>
-        <div className={styles.intoCourseLeader}>
-          <img
-            src="https://www.variablefontcourse.com/wp-content/uploads/2021/08/arthur_mattmo_crop.jpeg"
-            alt=""
-          />
-          <div>
-            <p>Arthur Reinders Folmer</p>
-            <p>Instructor</p>
-          </div>
-        </div>
-        <div className={styles.contentBoxGrid}>
-          <p className={styles.contentBoxPrice}>Full course, only €179</p>
-          <a
-            href="https://www.variablefontcourse.com/checkout/?add-to-cart=101"
-            title="Join Now"
-          >
-            <button className={styles.enroll}>Join Now</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-export default IntroSection;
-
-----------------------------------------
-
-// src/components/DecoSection.js:
-
-import React from 'react';
-
-const DecoSection = () => (
-  <section className="deco">
-    <div>
-      <span className="space">&nbsp;</span>
-      <span className="l">L</span>
-      <span className="e">e</span>
-      <span className="a">a</span>
-      <span className="r">r</span>
-      <span className="n">n</span>
-      <span className="space">&nbsp;</span>
-      <p>(You will learn keyframe animation as well! :)</p>
-    </div>
-  </section>
-);
-
-export default DecoSection;
-
-----------------------------------------
-
-// src/index.css:
 
 body {
+  background-color: white !important;
+  font-family: 'SF UI Text', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0 !important;
+  padding-top: 0px !important;
+  height: 295px;
+  line-height: 1.6875rem;
+  text-size-adjust: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  height: 100%;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  box-sizing: border-box;
 }
 
-----------------------------------------
+div {
+  border-radius: 0;
+}
 
-// src/index.js:
+nav {
+  font-size: 1em;
+}
 
-import './index.css';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+// nav span {
+//   position: relative;
+//   top: 1em;
+// }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+ul {
+  padding: 0;
+  box-sizing: border-box;
+}
 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+li {
+  border-radius: 0;
+}
 
-----------------------------------------
+img {
+  border: 0;
+  font-style: italic;
+  max-width: 100%;
+  vertical-align: middle;
+}
 
-// src/logo.svg:
+a {
+  color: var(--bb-primary-color);
+  outline: 0;
+  text-decoration: none;
+  background-color: transparent;
+}
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3"><g fill="#61DAFB"><path d="M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z"/><circle cx="420.9" cy="296.5" r="45.7"/><path d="M520.5 78.1z"/></g></svg>
-----------------------------------------
+button {
+  text-transform: none;
+  overflow: visible;
+  margin: 0;
+}
 
-// src/setupTests.js:
+:root {
+  --bb-primary-color: #0000ff;
+}
 
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
+@font-face {
+  font-family: 'SF UI Text';
+  src:
+    url('../../public/SFUIText\ Regular.woff') format('woff'),
+    url('../../public/SFUIText\ Regular.woff') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 ----------------------------------------
 
 // src/styles/styles.module.scss:
 
-/* General Styles */
-body {
-  height: 295px;
+/* BACKGROUND STYLING */
+.background {
+  background: linear-gradient(
+    90deg,
+    #e9f7fd 0%,
+    #e8f6fd 9.09%,
+    #e7f1fc 18.18%,
+    #e5eafb 27.27%,
+    #e3e2fa 36.36%,
+    #e9dff8 45.45%,
+    #efddf6 54.55%,
+    #f4dbf3 63.64%,
+    #f2d9ea 72.73%,
+    #f0d8e2 81.82%,
+    #efd7de 90.91%,
+    #eed7dc 100%
+  );
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-/* Header Background */
-.background {
+/* BACKGROUND HEADER */
+.backgroundHeader {
   position: relative;
   border-bottom-left-radius: 4em;
   border-bottom-right-radius: 4em;
 }
 
-/* Navigation Styles */
+/* NAVIGATION BAR */
+.navSpan {
+  position: relative;
+  top: 1em;
+}
+
 .navUl {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: grid;
+  list-style-type: none;
+  place-items: center;
 }
 
 .navLi {
-  display: inline-block;
+  place-self: start;
+}
+
+.navLiCenter {
+  font-size: 1rem;
 }
 
 .navLiEnd {
@@ -956,6 +151,78 @@ body {
 
 .logo {
   width: auto;
+}
+
+/* Buttons */
+
+.spanButton {
+  font-size: 'SF UI Text', sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: var(--bb-button-radius);
+  padding: 10px 20px;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.3;
+  outline: 0;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  transition: all linear 0.2s;
+  text-transform: none;
+  overflow: visible;
+  margin: 0;
+}
+
+.joinButton {
+  background: var(--vfcBlue);
+  color: white;
+}
+
+.signin {
+  color: #2a2a2a;
+}
+
+/* HEADER CONTENT */
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin-left: auto;
+  gap: 2rem;
+  cursor:
+    url(../../public/stretch-online.svg) 4 12,
+    auto;
+}
+
+.displayVariable {
+  height: 65vh;
+  display: grid;
+  padding-top: 4em;
+}
+
+.variable {
+  font-family: 'Frequency', sans-serif;
+  font-variation-settings: 'wdth' 409.292;
+  font-size: 9vw;
+  line-height: 0.8em;
+  display: inline-block;
+  color: #000bff;
+  text-align: center;
+  text-rendering: geometricPrecision;
+  cursor:
+    url(../../public/stretch-online.svg) 0 0,
+    auto;
+}
+
+.variableSettings {
+  font-variation-settings: 'wdth' 299.432;
 }
 
 /* Styles for button-like links */
@@ -978,20 +245,15 @@ body {
 }
 
 /* Buttons */
-.signin,
-.enroll {
-  background: var(--vfcBlue);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.signin {
-  background: transparent;
-  color: inherit;
-}
+// .signin,
+// .enroll {
+//   background: var(--vfcBlue);
+//   color: white;
+//   border: none;
+//   padding: 10px 20px;
+//   border-radius: 5px;
+//   cursor: pointer;
+// }
 
 .enroll {
   background: var(--vfcBlue);
@@ -1024,7 +286,7 @@ body {
   color: #2a2a2a;
 }
 
-.intoCourseLeader {
+.introCourseLeader {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1283,6 +545,72 @@ body {
   right: 1em;
   cursor: pointer;
 }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 767px) {
+  .navUl {
+    grid-template-columns: 1fr auto 1fr;
+    margin: 0 1em;
+  }
+  .logo {
+    height: 1.5rem;
+  }
+  .navLiCenter {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 478px) {
+  .spanButton {
+    font-size: 0.6em;
+  }
+  .headerContent {
+    margin-top: 1em;
+  }
+  .displayVariable {
+    height: 30vh;
+  }
+}
+
+/* VARIABLES */
+:root {
+  --vfcBlue: #0000ff;
+  --bb-button-radius: 100px;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: 'Frequency';
+  src:
+    url('../../public/Frequency.woff2') format('woff2-variations'),
+    /* will be the standard and works in Safari now */
+      url('../../public/Frequency.woff2') format('woff2');
+  /* for the other supporting browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Frequency_Variable';
+  src:
+    url('../../public/Frequency-Variable.woff2') format('woff2-variations'),
+    /* will be the standard and works in Safari now */
+      url('../../public/Frequency-Variable.woff2') format('woff2');
+  /* for the other supporting browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'Frequency-color';
+//   src:
+//     url('../fonts/Frequency-color.woff2') format('woff2-variations'),
+//     /* will be the standard and works in Safari now */
+//       url('../fonts/Frequency-color.woff2') format('woff2');
+//   /* for the other supporting browsers */
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 ----------------------------------------
 
