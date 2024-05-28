@@ -10,9 +10,11 @@ const IntroSection = () => (
           Learn how to create your own variable color font
         </h2>
         <p className={styles.introTextBody}>
-          Variable fonts are an exciting new way to express typography...
+          Variable fonts are an exciting new way to express typography. In my
+          work, I'm pushing the limits of this technique. I’m thrilled to share
+          my knowledge with the rest of the world in this video course!
         </p>
-        <div className={styles.introCourseLeader}>
+        <div className={styles.intoCourseLeader}>
           <img
             className={styles.instructorImage}
             src="https://www.variablefontcourse.com/wp-content/uploads/2021/08/arthur_mattmo_crop.jpeg"

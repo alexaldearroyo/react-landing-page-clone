@@ -32,7 +32,9 @@ const NavBar = () => (
               </span>
             </a>
             <a href="/wp-login.php" title="Sign in">
-              <span className={classNames(styles.signin, styles.spanButton)}>
+              <span
+                className={classNames(styles.signinButton, styles.spanButton)}
+              >
                 Sign in
               </span>
             </a>
