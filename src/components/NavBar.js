@@ -26,11 +26,7 @@ const NavBar = () => (
           <li className={styles.navLiEnd}>
             <a href="/checkout/?add-to-cart=101" title="Join the course">
               <span
-                className={classNames(
-                  styles.signin,
-                  styles.joinButton,
-                  styles.spanButton,
-                )}
+                className={classNames(styles.joinButton, styles.spanButton)}
               >
                 JOIN NOW
               </span>

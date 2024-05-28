@@ -34,7 +34,7 @@ div {
 }
 
 nav {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 // nav span {
@@ -69,4 +69,8 @@ button {
   text-transform: none;
   overflow: visible;
   margin: 0;
+}
+
+:root {
+  --bb-primary-color: #0000ff;
 }
