@@ -19,7 +19,9 @@ body {
   margin: 0;
   padding: 0 !important;
   padding-top: 0px !important;
-  height: 295px; /*element-style*/
+  height: 295px;
+  line-height: 1.6875rem;
+  text-size-adjust: 100%;
 }
 
 html {

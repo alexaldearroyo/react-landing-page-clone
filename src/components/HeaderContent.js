@@ -6,13 +6,7 @@ const HeaderContent = () => {
   return (
     <div className={styles.headerContent}>
       <div className={styles.displayVariable}>
-        <div
-          className="variable"
-          style={{
-            fontVariationSettings: '"wdth" 397.017',
-            fontFamily: 'var(--your-variable-font), sans-serif',
-          }}
-        >
+        <div className={styles.variable}>
           Your own <br />
           variable <br />
           font

@@ -109,7 +109,8 @@
 }
 
 .variable {
-  // font-family: 'Frequency';
+  font-family: 'Frequency', sans-serif;
+  font-variation-settings: 'wdth' 409.292;
   font-size: 9vw;
   line-height: 0.8em;
   display: inline-block;
@@ -446,7 +447,7 @@
   cursor: pointer;
 }
 
-/* Media Queries */
+/* MEDIA QUERIES */
 @media only screen and (max-width: 767px) {
   .navUl {
     grid-template-columns: 1fr auto 1fr;
@@ -458,8 +459,17 @@
   .navLiCenter {
     padding-top: 0;
   }
+}
+
+@media only screen and (max-width: 478px) {
   .spanButton {
     font-size: 0.6em;
+  }
+  .headerContent {
+    margin-top: 1em;
+  }
+  .displayVariable {
+    height: 30vh;
   }
 }
 
@@ -468,3 +478,37 @@
   --vfcBlue: #0000ff;
   --bb-button-radius: 100px;
 }
+
+/* FONTS */
+
+@font-face {
+  font-family: 'Frequency';
+  src:
+    url('../../public/Frequency.woff2') format('woff2-variations'),
+    /* will be the standard and works in Safari now */
+      url('../../public/Frequency.woff2') format('woff2');
+  /* for the other supporting browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Frequency_Variable';
+  src:
+    url('../../public/Frequency-Variable.woff2') format('woff2-variations'),
+    /* will be the standard and works in Safari now */
+      url('../../public/Frequency-Variable.woff2') format('woff2');
+  /* for the other supporting browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'Frequency-color';
+//   src:
+//     url('../fonts/Frequency-color.woff2') format('woff2-variations'),
+//     /* will be the standard and works in Safari now */
+//       url('../fonts/Frequency-color.woff2') format('woff2');
+//   /* for the other supporting browsers */
+//   font-weight: normal;
+//   font-style: normal;
+// }
