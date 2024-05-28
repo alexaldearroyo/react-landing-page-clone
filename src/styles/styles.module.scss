@@ -1,3 +1,5 @@
+@import './media-queries';
+
 /* BACKGROUND STYLING */
 .background {
   background: linear-gradient(
@@ -221,6 +223,9 @@
   background-color: #000bff;
   font-size: 20px;
 }
+.enroll:hover {
+  border: 2px solid #000bff;
+}
 
 .enrollButton {
   font-family: inherit;
@@ -256,6 +261,7 @@
 }
 
 /* DECO SECTION */
+
 .deco {
   text-align: center;
   padding: 2em 0;
